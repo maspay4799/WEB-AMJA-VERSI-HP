@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPERASI KONSUMEN AGRI MULYA JAYA ABADI</title>
+    <style>
+        :root {
+            --primary-bg: #111d13;
+            --secondary-bg: #1e3321;
+            --accent-green: #2e6930;
+            --bright-green: #4caf50;
+            --highlight: #ffeb3b;
+            --text-light: #ffffff;
+            --text-muted: #c8e6c9;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0b140d;
+            border-bottom: 3px solid var(--bright-green);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        /* Animasi Simpel Bergerak untuk Judul Teks */
+        @keyframes gerakSimpel {
+            0% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.02); opacity: 1; text-shadow: 0 0 10px rgba(255, 235, 59, 0.4); }
+            100% { transform: scale(1); opacity: 0.95; }
+        }
+        .header-title {
+            color: var(--highlight);
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            flex-grow: 1;
+            animation: gerakSimpel 3s infinite ease-in-out;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        /* Animasi Berdenyut untuk Logo di Kanan */
+        @keyframes berdenyut {
+            0% { transform: scale(1); box-shadow: 0 0 12px rgba(76, 175, 80, 0.4); }
+            50% { transform: scale(1.08); box-shadow: 0 0 25px rgba(76, 175, 80, 0.9); }
+            100% { transform: scale(1); box-shadow: 0 0 12px rgba(76, 175, 80, 0.4); }
+        }
+        .logo-animasi {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--bright-green);
+            animation: berdenyut 2.5s infinite ease-in-out;
+        }
+        
+        .home-btn {
+            background: var(--accent-green);
+            color: white;
+            border: 2px solid var(--bright-green);
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .home-btn:hover {
+            background: var(--bright-green);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .menu-card {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--accent-green);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .menu-card-header {
+            background-color: #0b140d;
+            color: var(--highlight);
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            border-bottom: 2px solid var(--accent-green);
+        }
+        .menu-list {
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+        }
+        .menu-list li a {
+            display: block;
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: background 0.2s, padding-left 0.2s;
+        }
+        .menu-list li a:hover {
+            background-color: var(--accent-green);
+            color: white;
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="home-btn">🏠 BERANDA</a>
+        <div class="header-title">KOPERASI KONSUMEN AGRI MULYA JAYA ABADI</div>
+        <div class="header-center">
+            <img src="LOGO.jpeg" alt="Logo Koperasi" class="logo-animasi" onerror="this.onerror=null; this.src='LOGO.JPG'; if(this.src=='LOGO.JPG') { this.onerror=function(){this.src='logo.png';}; this.src='LOGO.png'; }">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="menu-grid">
+            <!-- Kolom 1: Setup & Data -->
+            <div class="menu-card">
+                <div class="menu-card-header">* SETUP & DATA</div>
+                <ul class="menu-list">
+                    <li><a href="AKTA NOTARIS.pdf" target="_blank">AKTA NOTARIS</a></li>
+                    <li><a href="data-usaha.pdf" target="_blank">DATA USAHA</a></li>
+                    <li><a href="DAFTAR PENGURUS.pdf" target="_blank">DAFTAR PENGURUS KOPERASI</a></li>
+                    <li><a href="DAFTAR ANGGOTA PENDIRI KOPERASI.pdf" target="_blank">DAFTAR ANGGOTA KOPERASI</a></li>
+                    <li><a href="daftar-supplier.pdf" target="_blank">DAFTAR SUPPLIER</a></li>
+                    <li><a href="daftar-keuangan.pdf" target="_blank">DAFTAR KEUANGAN</a></li>
+                    <li><a href="inventaris.pdf" target="_blank">DAFTAR ASET / INVENTARIS</a></li>
+                    <li><a href="PROFIL KEBUN.pdf" target="_blank">DATA ANGGOTA SARPRAS 2026</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 2: Usaha Jasa -->
+            <div class="menu-card">
+                <div class="menu-card-header">* USAHA JASA</div>
+                <ul class="menu-list">
+                    <li><a href="REFERENSI HARGA PUPUK.pdf" target="_blank">REFERENSI PUPUK</a></li>
+                    <li><a href="REFERENSI HARGA PESTISIDA.pdf" target="_blank">REFERENSI PESTISIDA</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Transaksi Umum -->
+            <div class="menu-card">
+                <div class="menu-card-header">* TRANSAKSI UMUM</div>
+                <ul class="menu-list">
+                    <li><a href="penerimaan-lain.pdf" target="_blank">PENERIMAAN LAIN</a></li>
+                    <li><a href="pengeluaran.pdf" target="_blank">PENGELUARAN</a></li>
+                    <li><a href="pembelian-penjualan-aset.pdf" target="_blank">PEMBELIAN / PENJUALAN ASET</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Laporan Keuangan -->
+            <div class="menu-card">
+                <div class="menu-card-header">* LAPORAN KEUANGAN</div>
+                <ul class="menu-list">
+                    <li><a href="report-bulanan.pdf" target="_blank">REPORT BULANAN</a></li>
+                    <li><a href="report-tahunan.pdf" target="_blank">REPORT TAHUNAN</a></li>
+                    <li><a href="neraca.pdf" target="_blank">NERACA</a></li>
+                    <li><a href="ARUS KAS.pdf" target="_blank">ARUS KAS</a></li>
+                    <li><a href="DAFTAR MODAL PENYERTAAN.pdf" target="_blank">DAFTAR MODAL PENYERTAAN</a></li>
+                    <li><a href="DAFTAR SIMPANAN.xlsx.pdf" target="_blank">BUKU DAFTAR SIMPANAN</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 5: Daftar Simpanan -->
+            <div class="menu-card">
+                <div class="menu-card-header">* DAFTAR SIMPANAN</div>
+                <ul class="menu-list">
+                    <li><a href="simpanan-pokok.pdf" target="_blank">SIMPANAN POKOK</a></li>
+                    <li><a href="simpanan-wajib.pdf" target="_blank">SIMPANAN WAJIB</a></li>
+                    <li><a href="tabungan-anggota.pdf" target="_blank">TABUNGAN ANGGOTA</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 6: Usaha Produksi -->
+            <div class="menu-card">
+                <div class="menu-card-header">* USAHA PRODUKSI</div>
+                <ul class="menu-list">
+                    <li><a href="pembelian-produksi.pdf" target="_blank">PEMBELIAN PRODUKSI</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
